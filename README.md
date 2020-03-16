@@ -8,6 +8,7 @@ Technologies used:
   - Git/Trello/UXPin
 
 BRIEF
+--
 
 Suggested user: Front of House Manager - Books tables on behalf of customers.
 
