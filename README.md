@@ -1,4 +1,4 @@
-Restaurant Booking System App 
+Restaurant Booking System App
 
 Technologies used: 
   - ReactJS
@@ -7,6 +7,7 @@ Technologies used:
   - Git/Trello/UXPin
 
 BRIEF
+
 Suggested user: Front of House Manager - Books tables on behalf of customers.
 
 You have been tasked to create a booking system for a brand new restaurant. 
@@ -24,3 +25,14 @@ Your system must be able to:
 - Display a list of bookings for a given date as well as a visual display 
 - Use a pop up window for the add new booking form 
 
+
+To get the app working on localhost follow these instructions in the terminal:
+
+ open file restaurant-booker:
+    npm i 
+    npm start
+    
+ open back_end in INTELLIJ:
+  - run RestaurantBookerApplication
+  
+ view in localhost:3000
