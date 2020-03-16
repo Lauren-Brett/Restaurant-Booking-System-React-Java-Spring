@@ -1,8 +1,12 @@
-# Restaurant-Booking-System-React-Java-Spring
-Group project building a restaurant booking system from scratch using ReactJS, Java and Spring.
+Restaurant Booking System App 
+
+Technologies used: 
+  - ReactJS
+  - Java
+  - Spring
+  - Git/Trello/UXPin
 
 BRIEF
-Restaurant Booking System:
 Suggested user: Front of House Manager - Books tables on behalf of customers
 You have been tasked to create a booking system for a brand new restaurant. 
 The restaurant needs a way to book and arrange tables for customers who are booking over the phone. 
