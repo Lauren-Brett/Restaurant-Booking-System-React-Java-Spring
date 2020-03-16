@@ -1,4 +1,5 @@
 Restaurant Booking System App
+-
 
 Technologies used: 
   - ReactJS
@@ -28,11 +29,11 @@ Your system must be able to:
 
 To get the app working on localhost follow these instructions in the terminal:
 
- open file restaurant-booker:
+ - open file restaurant-booker:
     npm i 
     npm start
     
- open back_end in INTELLIJ:
+ - open back_end in INTELLIJ:
   - run RestaurantBookerApplication
   
- view in localhost:3000
+ - view in localhost:3000
