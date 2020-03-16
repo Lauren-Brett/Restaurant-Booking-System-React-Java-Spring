@@ -7,7 +7,8 @@ Technologies used:
   - Git/Trello/UXPin
 
 BRIEF
-Suggested user: Front of House Manager - Books tables on behalf of customers
+Suggested user: Front of House Manager - Books tables on behalf of customers.
+
 You have been tasked to create a booking system for a brand new restaurant. 
 The restaurant needs a way to book and arrange tables for customers who are booking over the phone. 
 This system is for the staff to use.
