@@ -30,9 +30,10 @@ Your system must be able to:
 To get the app working on localhost follow these instructions in the terminal:
 
  - open file restaurant-booker:
-    npm i 
-    npm start
-    
+ 
+       npm i 
+       npm start
+      
  - open back_end in INTELLIJ:
   - run RestaurantBookerApplication
   
