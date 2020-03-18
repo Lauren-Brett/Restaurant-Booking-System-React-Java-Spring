@@ -50,5 +50,5 @@ main {
 .graph {
   grid-area: graph;
   margin: 30px;
-  background-color: rgb(229, 239, 240);
+  background-color: white;
 }

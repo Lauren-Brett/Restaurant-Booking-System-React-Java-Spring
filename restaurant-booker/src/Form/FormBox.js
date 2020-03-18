@@ -6,7 +6,7 @@ import "./formbox.css";
 import BookingForm from "./BookingForm";
 import BookingNewCustomerForm from "./BookingNewCustomerForm.js";
 
-const creds = require("../config/IdConfig.js");
+const creds = require("../config/idconfig.js");
 
 class FormBox extends Component {
   constructor(props) {
@@ -155,14 +155,6 @@ class FormBox extends Component {
       .then(() => this.props.handleFormSubmit())
       .catch(console.error);
   }
-
-  // getToday(){
-  //     var today = new Date();
-  //     var dd = String(today.getDate()).padStart(2, '0');
-  //     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-  //     var yyyy = today.getFullYear();
-  //     today = mm + '/' + dd + '/' + yyyy;
-  // }
 
   handleCloseModal = () => {
     this.props.closePop();

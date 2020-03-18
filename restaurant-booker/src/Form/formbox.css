@@ -8,21 +8,15 @@
   height: 400px;
   max-height: 100%;
   z-index: 1010;
-  background-color: rgb(140, 184, 86);
+  background-color: white;
   box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
 }
 
 .newBookingModal .closeButton {
   position: absolute;
-
-  /* don't need to go crazy with z-index here, just sits over .modal-guts */
   z-index: 1;
-
   top: 10px;
-
-  /* needs to look OK with or without scrollbar */
   right: 20px;
-
   border: 0;
   padding: 5px 10px;
   font-size: 1.3rem;
@@ -41,12 +35,6 @@
 }
 
 .modal-overlay {
-  /* recommendation:
-       don't focus on the number "1000" here, but rather,
-       you should have a documented system for z-index and 
-       follow that system. This number should be pretty
-       high on the scale in that system.
-    */
   z-index: 1000;
   position: fixed;
   top: 0;
