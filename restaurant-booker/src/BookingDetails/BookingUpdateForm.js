@@ -15,7 +15,6 @@ function BookingUpdateForm({
   const [date, setDate] = useState(selectedBooking.date);
   const [time, setTime] = useState(selectedBooking.time);
   const [table, setTable] = useState(selectedBooking.table);
-  // const[bookingSlots, setBookingSlots] = useState(bookingSlots)
 
   function handlePax(event) {
     setPax(event.target.value);
@@ -68,7 +67,6 @@ function BookingUpdateForm({
       customer,
       desk
     }).then(() => fetchBookings());
-    // console.log("fetch booking function in components");
   }
 
   function handleCloseModalUpdate() {

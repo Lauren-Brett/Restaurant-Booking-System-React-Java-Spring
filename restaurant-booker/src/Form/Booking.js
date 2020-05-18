@@ -14,19 +14,24 @@ function Booking({
   }
 
   return (
-    <li
-      key={bookingValue.id}
-      className="booking-item"
-      onClick={handleEditBooking}
-    >
-      <label>Name: </label>
-      {bookingValue.customer.name}
-      <br></br>
-      <label>Date: </label>
-      {bookingValue.date}
-      <br></br>
-      <label>Time: </label> {bookingValue.time}
-    </li>
+    <>
+      <li
+        key={bookingValue.id}
+        className="booking-item"
+        onClick={handleEditBooking}
+      >
+        <label>Name: </label>
+        {bookingValue.customer.name}
+        <br></br>
+        <label>Date: </label>
+        {bookingValue.date}
+        <br></br>
+        <label>Time: </label> {bookingValue.time}
+      </li>
+      {/* <li style={{ listStyle: "none" }}>
+        <button className="button-update">Update</button>
+      </li> */}
+    </>
   );
 }
 

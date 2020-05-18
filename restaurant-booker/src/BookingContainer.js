@@ -14,7 +14,7 @@ function BookingContainer() {
     "19:00",
     "20:00",
     "21:00",
-    "22:00"
+    "22:00",
   ]);
   const [selectedBooking, setSelectedBooking] = useState(null);
   const [bookingToDelete, setBookingToDelete] = useState(1);
@@ -38,10 +38,10 @@ function BookingContainer() {
     console.log("fetch booking function");
     return (
       fetch("http://localhost:8080/bookings/customerAndDesk")
-        .then(res => res.json())
+        .then((res) => res.json())
         // .then(response => console.log(response))
-        .then(result => setBookings(result))
-        .catch(error => console.log(error))
+        .then((result) => setBookings(result))
+        .catch((error) => console.log(error))
     );
   }
 
@@ -49,10 +49,10 @@ function BookingContainer() {
     fetch(
       "http://localhost:8080/desks/getAllBookingsForAGivenDesk?date=06/07/2020"
     )
-      .then(res => res.json())
+      .then((res) => res.json())
       // .then(response => console.log(response))
-      .then(result => setTables(result))
-      .catch(error => console.log(error));
+      .then((result) => setTables(result))
+      .catch((error) => console.log(error));
   }, []);
 
   useEffect(() => {
@@ -60,8 +60,8 @@ function BookingContainer() {
     fetch(
       `http://localhost:8080/desks/getAllDesksByTimeAndDate?date=${dateSelected}&time=${timeSelected}`
     )
-      .then(res => res.json())
-      .then(unavailableTables => {
+      .then((res) => res.json())
+      .then((unavailableTables) => {
         // console.log("tables:",tables);
         // console.log("unavailableTables:", unavailableTables);
         // const availableTables = tables.filter(table => !unavailableTables.some(unavailableTable => unavailableTable.id === table.id))
@@ -75,11 +75,11 @@ function BookingContainer() {
         setTablesAvailable(availableTables);
       })
 
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   }, [dateSelected, timeSelected]);
 
   useEffect(() => {
-    let filteredBookings = bookings.filter(booking => {
+    let filteredBookings = bookings.filter((booking) => {
       return booking.customer.name
         .toLowerCase()
         .includes(searchString.toLowerCase());
@@ -88,7 +88,7 @@ function BookingContainer() {
   }, [searchString]);
 
   function findBookingById(id) {
-    return bookings.find(item => item.id === id);
+    return bookings.find((item) => item.id === id);
   }
 
   function handleBookingItemClick(itemId) {
@@ -104,8 +104,8 @@ function BookingContainer() {
     // console.log("booking link to be deleted", booking);
     JSON.stringify({ booking });
     Axios.delete(`http://localhost:8080/bookings/${bookingId}`, {
-      booking
-    }).then(res => {
+      booking,
+    }).then((res) => {
       console.log(res);
       window.location.reload();
     });
@@ -143,8 +143,8 @@ function BookingContainer() {
     fetch(
       "http://localhost:8080/desks/getAllBookingsForAGivenDesk?date=06/07/2020"
     )
-      .then(res => res.json())
-      .then(result => setTables(result))
+      .then((res) => res.json())
+      .then((result) => setTables(result))
       .then(() => fetchBookings());
     // .catch(error => console.log(error));
   }
@@ -160,7 +160,7 @@ function BookingContainer() {
   return (
     <>
       <header>
-        <h1>Restaurant Booking Buddy</h1>
+        <h1>Restaurant Booking App</h1>
       </header>
       <main>
         <button className="addBookingButton" onClick={showModal}>

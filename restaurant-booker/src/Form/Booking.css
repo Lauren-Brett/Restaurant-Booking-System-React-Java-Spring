@@ -1,11 +1,21 @@
-li {
+li.booking-item {
   list-style: circle;
   text-align: left;
   margin: 5px;
 }
 
+.button-update {
+  list-style: none;
+}
+
+/* .booking-list-items {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-areas: "booking-item button-update";
+} */
+
 li:hover {
-  background-color: grey;
+  background-color: rgb(218, 228, 231);
 }
 
 label {
@@ -17,4 +27,9 @@ ul {
   border: solid 0.1em grey;
   background-color: white;
   margin: 0;
+  cursor: default;
+}
+
+label {
+  font-size: small;
 }

@@ -9,8 +9,9 @@ main {
   grid-template-areas:
     "dateSelector addbooking searchbox"
     "graph graph bookinglist";
-  grid-column-gap: 1%;
-  grid-row-gap: 1%;
+  grid-column-gap: 0.5%;
+  grid-row-gap: 3%;
+  margin: 2%;
 }
 
 .addBookingButton {
@@ -32,6 +33,7 @@ main {
 .booking-list {
   grid-area: bookinglist;
   font-weight: 400;
+  margin: 10px;
 }
 
 .date-selector {
@@ -49,6 +51,5 @@ main {
 
 .graph {
   grid-area: graph;
-  margin: 30px;
-  background-color: white;
+  margin: 20px;
 }

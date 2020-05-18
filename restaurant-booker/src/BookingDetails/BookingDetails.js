@@ -7,14 +7,6 @@ class BookingDetails extends Component {
     super(props);
   }
 
-  // handlePax = (event) => this.setState({pax: event.target.value})
-
-  // handleDate = (event) => {
-  //     this.setState({date: event.target.value})
-  // }
-
-  // handleTime = (event) => this.setState({selectedTime: event.target.value})
-
   render() {
     if (!this.props.selectedBooking) return null;
 
@@ -38,18 +30,6 @@ class BookingDetails extends Component {
           handleBookingDeleteClick={this.props.handleBookingDeleteClick}
           fetchBookings={this.props.fetchBookings}
         />
-        {/* <BookingDelete bookingToDelete={this.props.bookingToDelete} /> */}
-
-        {/* <h4> below just fixed data. So we know what's inside</h4>
-                <section>
-                    <header>Selected Booking ID: {this.props.selectedBooking.id}</header>
-                    <main>
-                        <p>Date: {this.props.selectedBooking.date}</p>
-                        <p>Time: {this.props.selectedBooking.time}</p>
-                        <p>Customer: {this.props.selectedBooking.customer.name} </p>
-                    </main>
-                
-                </section> */}
       </>
     );
   }

@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Booking from "./Booking";
-import "./BookingList.css";
+import "./Booking.css";
 
 function BookingList({
   bookings,
   searchedBookings,
   handleBookingItemClick,
   handleBookingDeleteClick,
-  showModalUpdate
+  showModalUpdate,
 }) {
   let bookingItems;
 
   if (searchedBookings.length == 0) {
-    bookingItems = bookings.map(booking => {
+    bookingItems = bookings.map((booking) => {
       return (
         <Booking
           bookingValue={booking}
@@ -26,14 +26,12 @@ function BookingList({
     });
     // setBookingItem(bookingItem);
   } else {
-    bookingItems = searchedBookings.map(booking => {
+    bookingItems = searchedBookings.map((booking) => {
       return (
         <Booking
           bookingValue={booking}
           handleBookingItemClick={handleBookingItemClick}
           showModalUpdate={showModalUpdate}
-          // email={booking.email}
-          // phoneNum={booking.phoneNum}
           key={booking.id}
         ></Booking>
       );
@@ -41,14 +39,12 @@ function BookingList({
   }
 
   function returnBookingStuff(selectedArray) {
-    return selectedArray.map(booking => {
+    return selectedArray.map((booking) => {
       return (
         <Booking
           bookingValue={booking}
           handleBookingItemClick={handleBookingItemClick}
           showModalUpdate={showModalUpdate}
-          // email={booking.email}
-          // phoneNum={booking.phoneNum}
           key={booking.id}
         ></Booking>
       );
@@ -65,8 +61,8 @@ function BookingList({
 
   return (
     <>
-      <p>Current Reservations: </p>
-      <ul>{bookingItems}</ul>
+      <label className="booking-list-title">Current Reservations: </label>
+      <ul className="booking-list-items">{bookingItems}</ul>
     </>
   );
 }

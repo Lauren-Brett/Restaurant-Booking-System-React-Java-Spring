@@ -1,33 +1,18 @@
 import React from "react";
+import "./Graph.css";
 
-function GraphTableRow({ bookingSlots, tables, displayDate }) {
-  // const [filteredTablesByDate, setFilteredTablesByDate] = useState([]);
-
-  // useEffect(() => {
-  //   let tablesFiltered = tables.filter(({ bookings }) => {
-  //     const dates = bookings.map(booking => booking.date);
-  //     return dates.includes(displayDate);
-  //   });
-  //   setFilteredTablesByDate(tablesFiltered);
-  // }, [displayDate, tables]);
-
-  const createTD = tables.map(table => {
-    // const tablesFilteredByBookingDate = table.bookings.filter(({ date }) => {
-    //   return date === displayDate;
-    // });
-    // console.table(tablesFilteredByBookingDate);
-    // console.log("log of tables filtered " + tablesFilteredByBookingDate[0]);
-    // console.log(tables);
-
+function GraphTableRow({ bookingSlots, tables, displayDate, bookings }) {
+  const createTD = tables.map((table) => {
     return (
       <tr>
-        <td style={{ backgroundColor: "orange", fontWeight: 600 }}>
-          Table: {table.id} Pax: {table.pax}
+        <td className="time-colum">
+          <label>T{table.id}</label>
+          <p>{table.pax} pax</p>
         </td>
 
-        {bookingSlots.map(bookingSlot => {
+        {bookingSlots.map((bookingSlot) => {
           if (table.bookings.length === 0) {
-            return <td>No Bookings for this time</td>;
+            return <td className="available-slot">available table</td>;
           } else {
             let findBookingPerTable = table.bookings.find(({ time, date }) => {
               return (
@@ -43,15 +28,15 @@ function GraphTableRow({ bookingSlots, tables, displayDate }) {
 
               return (
                 <td className="entry">
-                  <a href="">
+                  <label>
                     {" "}
-                    Customer: {findCustomer} <br /> People:{" "}
-                    {findBookingPerTable.numberOfPeople}
-                  </a>
+                    {findCustomer}
+                    <p>{findBookingPerTable.numberOfPeople} pax</p>
+                  </label>
                 </td>
               );
             } else {
-              return <td>No Bookings for this time</td>;
+              return <td className="available-slot">available table</td>;
             }
           }
         })}
