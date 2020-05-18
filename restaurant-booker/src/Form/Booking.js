@@ -6,7 +6,7 @@ function Booking({
   bookingValue,
   handleBookingItemClick,
   handleBookingDeleteClick,
-  showModalUpdate
+  showModalUpdate,
 }) {
   function handleEditBooking() {
     showModalUpdate();
@@ -23,10 +23,11 @@ function Booking({
         <label>Name: </label>
         {bookingValue.customer.name}
         <br></br>
-        <label>Date: </label>
+        <label className="booking-detail-list">Date: </label>
         {bookingValue.date}
         <br></br>
-        <label>Time: </label> {bookingValue.time}
+        <label className="booking-detail-list">Time: </label>{" "}
+        {bookingValue.time}
       </li>
       {/* <li style={{ listStyle: "none" }}>
         <button className="button-update">Update</button>

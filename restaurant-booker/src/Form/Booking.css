@@ -16,20 +16,29 @@ li.booking-item {
 
 li:hover {
   background-color: rgb(218, 228, 231);
-}
-
-label {
-  font-weight: 600;
+  cursor: pointer;
 }
 
 ul {
   padding: auto;
   border: solid 0.1em grey;
   background-color: white;
-  margin: 0;
+  margin-top: 2%;
   cursor: default;
 }
 
 label {
   font-size: small;
+  font-weight: 600;
+}
+
+.booking-list-title {
+  margin-bottom: 20px;
+
+  color: red;
+}
+
+.booking-detail-list {
+  margin-left: 10px;
+  font-weight: 500;
 }

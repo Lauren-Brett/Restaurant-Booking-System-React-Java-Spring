@@ -23,7 +23,6 @@ p {
 
 td.entry label p {
   color: rgb(46, 46, 46);
-  margin-left: 10%;
   font-weight: lighter;
 }
 
@@ -41,7 +40,14 @@ td.entry label p {
 
 td.time-colum {
   font-size: small;
-  /* padding-top: 0%; */
+}
+
+td.time-colum label {
+  font-size: 14px;
+}
+
+td.time-colum p {
+  font-size: 10px;
 }
 
 .time-header {
